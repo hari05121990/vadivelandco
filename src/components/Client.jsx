@@ -15,21 +15,28 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 const Client = () => {
   return (
     <>
+    <div
+          class="heading_container heading_center psudo_white_primary mb_45"
+          style={{ marginTop: "2rem" }}
+        >
+          <h2>What says our <span>Customers</span></h2>
+        </div>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
+        loop={true}
         coverflowEffect={{
-          rotate: 50,
+          rotate: 0,
           stretch: 0,
-          depth: 100,
-          modifier: 1,
+          depth: 150,
+          modifier: 2.5,
           slideShadows: true,
         }}
-        
+        autoplay={{ delay: 1000, disableOnInteraction: false }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination, ]}
         className="mySwiper"
       >
         <SwiperSlide>
